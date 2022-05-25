@@ -6,19 +6,23 @@ body {
   margin: 0;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 30px;
+a {
+  text-decoration: none;
 }
 
-nav h2 {
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+header a {
   font-size: 20px;
   font-weight: 600;
   color: #28352f;
 }
 
-main {
+section {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -28,7 +32,7 @@ main {
   background-position: center top;
 }
 
-main h1 {
+section h1 {
   font-weight: 700;
   font-size: 40px;
   color: #172b4d;
@@ -37,11 +41,11 @@ main h1 {
   width: 327px;
 }
 
-main h1 span {
+section h1 span {
   color: #36b37e;
 }
 
-main p {
+section p {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -50,14 +54,16 @@ main p {
   width: 327px;
 }
 
-main .social {
+section .social {
   display: flex;
   justify-content: center;
   gap: 19px;
   margin: 32px 0;
+  list-style-type: none;
+  padding: 0;
 }
 
-main > img {
+section > img {
   margin: 40px 0;
   height: 40px;
 }
