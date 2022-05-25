@@ -50,3 +50,7 @@ main .social {
   gap: 19px;
   margin: 32px 0px;
 }
+
+main > img {
+  margin: 60px 0;
+}
