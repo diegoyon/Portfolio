@@ -29,10 +29,11 @@ main h1 {
   font-size: 40px;
   color: #172b4d;
   line-height: 52px;
+  margin: 29px 0;
 }
 
 main h1 span {
-  color: green;
+  color: #36b37e;
 }
 
 main p {
@@ -40,4 +41,5 @@ main p {
   font-size: 20px;
   line-height: 28px;
   color: #172b4d;
+  margin: 29px 0;
 }
