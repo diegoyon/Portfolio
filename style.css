@@ -10,3 +10,8 @@ nav {
   justify-content: space-between;
   padding: 0 30px;
 }
+
+nav h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
