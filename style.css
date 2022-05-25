@@ -43,3 +43,10 @@ main p {
   color: #172b4d;
   margin: 29px 0;
 }
+
+main .social {
+  display: flex;
+  justify-content: center;
+  gap: 19px;
+  margin: 32px 0px;
+}
