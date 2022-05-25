@@ -54,7 +54,7 @@ main .social {
   display: flex;
   justify-content: center;
   gap: 19px;
-  margin: 32px 0px;
+  margin: 32px 0;
 }
 
 main > img {
