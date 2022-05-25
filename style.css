@@ -21,10 +21,10 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 30px 24px;
+  padding: 40px 24px;
   background-image: url(./images/header-illustration-mobile.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
 }
 
 main h1 {
@@ -32,7 +32,8 @@ main h1 {
   font-size: 40px;
   color: #172b4d;
   line-height: 52px;
-  margin: 29px 0;
+  margin: 29px auto;
+  width: 327px;
 }
 
 main h1 span {
@@ -44,7 +45,8 @@ main p {
   font-size: 20px;
   line-height: 28px;
   color: #172b4d;
-  margin: 29px 0;
+  margin: 29px auto;
+  width: 327px;
 }
 
 main .social {
@@ -56,4 +58,5 @@ main .social {
 
 main > img {
   margin: 40px 0;
+  height: 40px;
 }
