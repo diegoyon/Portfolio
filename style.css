@@ -20,8 +20,11 @@ nav h2 {
 main {
   display: flex;
   flex-direction: column;
-  margin: 74px 24px;
   text-align: center;
+  padding: 30px 24px;
+  background-image: url(./images/header-illustration-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 main h1 {
@@ -52,5 +55,5 @@ main .social {
 }
 
 main > img {
-  margin: 60px 0;
+  margin: 40px 0;
 }
