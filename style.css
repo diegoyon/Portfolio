@@ -14,4 +14,30 @@ nav {
 nav h2 {
   font-size: 20px;
   font-weight: 600;
+  color: #28352f;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 74px 24px;
+  text-align: center;
+}
+
+main h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: #172b4d;
+  line-height: 52px;
+}
+
+main h1 span {
+  color: green;
+}
+
+main p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #172b4d;
 }
