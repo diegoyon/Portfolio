@@ -9,47 +9,24 @@
 - HTML
 - CSS
 
-## Live Demo (if available)
-
-Not available
-
 ## Getting Started
 
-N/A
+To obtain a local copy of the project follow this steps:
+- Open your console.
+- Type the following "git clone https://github.com/diegoyon/Portfolio.git" if you are using HTTPS or "git clone git@github.com:diegoyon/Portfolio.git" if you are using a SSH key.
+- Press ENTER to create your local clone.
 
-### Prerequisites
+After creating it, you can go ahead and open the "index.html" file in your browser.
 
-N/A
 
-### Setup
-
-N/A
-
-### Install
-
-N/A
-
-### Usage
-
-N/A
-
-### Run tests
-
-N/A
-
-### Deployment
-
-N/A
 
 ## Authors
-
-- Diego Yon
 
 👤 **Diego Yon**
 
 - GitHub: [@diegoyon](https://github.com/diegoyon)
 - Twitter: [@diegoyon](https://twitter.com/diegoyon)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/diego-yon-9311aa41/)
+- LinkedIn: [Diego Yon](https://www.linkedin.com/in/diego-yon-9311aa41/)
 
 ## 🤝 Contributing
 
@@ -63,9 +40,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- Figma template design
+- Coding Partners: Jafar and fourteen.
 
 ## 📝 License
 
