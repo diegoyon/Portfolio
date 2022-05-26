@@ -22,7 +22,7 @@ header a {
   color: #28352f;
 }
 
-section {
+.headline {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -32,7 +32,7 @@ section {
   background-position: center top;
 }
 
-section h1 {
+.headline h1 {
   font-weight: 700;
   font-size: 40px;
   color: #172b4d;
@@ -41,11 +41,11 @@ section h1 {
   width: 327px;
 }
 
-section h1 span {
+.headline h1 span {
   color: #36b37e;
 }
 
-section p {
+.headline p {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -54,7 +54,7 @@ section p {
   width: 327px;
 }
 
-section .social {
+.headline .social {
   display: flex;
   justify-content: center;
   gap: 19px;
@@ -63,7 +63,19 @@ section .social {
   padding: 0;
 }
 
-section > img {
+.headline > img {
   margin: 40px 0;
   height: 40px;
+}
+
+.works {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(6, 1fr);
 }
