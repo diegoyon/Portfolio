@@ -50,7 +50,8 @@ header a {
   color: #36b37e;
 }
 
-.headline p {
+.headline p,
+.aboutme p {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -78,12 +79,13 @@ header a {
   align-items: center;
 }
 
-.works h2 {
+.works h2,
+.aboutme h2 {
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
   color: #172b4d;
-  margin: 0 160px;
+  margin: 0 120px;
 }
 
 hr {
@@ -142,10 +144,10 @@ hr {
   padding: 8px 12px;
 }
 
-.description button {
+button {
   font-size: 17px;
   font-weight: 500;
-  width: 122px;
+  padding: 12px;
   height: 48px;
   border-radius: 4px;
   align-self: center;
@@ -154,10 +156,38 @@ hr {
   color: white;
 }
 
-.description button:hover {
+button:hover {
   box-shadow: 0 8px 16px 0px rgba(54, 179, 127, 0.24);
 }
 
-.description button:active {
+button:active {
   background-color: #008552;
+}
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 68px;
+}
+
+.aboutme p {
+  margin: 24px 0;
+}
+
+.aboutme ul {
+  margin-top: 59px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.aboutme ul li {
+  width: 327px;
+  height: 352px;
+  border: 1px solid #c1c7d0;
+  background-color: #ebf0ee;
+  border-radius: 8px;
 }
