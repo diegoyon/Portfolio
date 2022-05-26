@@ -180,6 +180,10 @@ button:active {
   text-align: center;
   align-items: center;
   margin-top: 68px;
+  background-image: url(./images/illustration2-aboutme.svg),
+    url(./images/illustration-aboutme.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right top, center top;
 }
 
 .aboutme p {
