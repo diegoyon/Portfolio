@@ -12,7 +12,7 @@ a {
 
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0 8px;
 }
 
 header {
@@ -122,18 +122,28 @@ hr {
   flex-direction: column;
 }
 
-.description h3 {
+.description h3,
+.aboutme h3 {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   margin: 16px;
 }
 
+.description h3 {
+  color: #3a4a42;
+}
+
+.aboutme h3 {
+  color: #344563;
+}
+
 .description ul {
   margin-top: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 20px;
+  gap: 8px;
 }
 
 .description ul li {
@@ -176,7 +186,7 @@ button:active {
   margin: 24px 0;
 }
 
-.aboutme ul {
+.categories {
   margin-top: 59px;
   display: grid;
   grid-template-columns: 100%;
@@ -184,10 +194,36 @@ button:active {
   gap: 24px;
 }
 
-.aboutme ul li {
+.categories > li {
   width: 327px;
   height: 352px;
   border: 1px solid #c1c7d0;
   background-color: #ebf0ee;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags > li {
+  padding: 12px;
+  background-color: white;
+  color: #36b37e;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.categories li img {
+  margin-top: 18px;
+}
+
+.categories li h3 {
+  margin: 24px;
 }
