@@ -146,13 +146,7 @@ hr {
   gap: 8px;
 }
 
-.description ul li {
-  background-color: #ebf0ee;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 8px 12px;
-}
+
 
 button {
   font-size: 17px;
@@ -167,7 +161,7 @@ button {
 }
 
 button:hover {
-  box-shadow: 0 8px 16px 0px rgba(54, 179, 127, 0.24);
+  box-shadow: 0 8px 16px 0 rgba(54, 179, 127, 0.24);
 }
 
 button:active {
@@ -180,7 +174,8 @@ button:active {
   text-align: center;
   align-items: center;
   margin-top: 68px;
-  background-image: url(./images/illustration2-aboutme.svg),
+  background-image:
+    url(./images/illustration2-aboutme.svg),
     url(./images/illustration-aboutme.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: right top, center top;
@@ -230,4 +225,12 @@ button:active {
 
 .categories li h3 {
   margin: 24px;
+}
+
+.description ul li {
+  background-color: #ebf0ee;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 12px;
 }
