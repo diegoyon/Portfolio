@@ -153,3 +153,11 @@ hr {
   border: none;
   color: white;
 }
+
+.description button:hover {
+  box-shadow: 0 8px 16px 0px rgba(54, 179, 127, 0.24);
+}
+
+.description button:active {
+  background-color: #008552;
+}
