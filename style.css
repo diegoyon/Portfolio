@@ -102,4 +102,16 @@ hr {
   border: 1px solid #d0d9d4;
   width: 327px;
   height: 474px;
+  border-radius: 8px;
+  background-color: #ebf0ee;
+  display: flex;
+  align-items: flex-end;
+}
+
+.description {
+  background-color: white;
+  width: 327px;
+  height: 222px;
+  border-radius: 8px;
+  position: flex;
 }
