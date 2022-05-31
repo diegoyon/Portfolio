@@ -232,3 +232,28 @@ button:active {
   font-weight: 600;
   padding: 8px 12px;
 }
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+}
+
+footer h2{
+  font-size: 40px;
+  font-weight: 700;
+  color:#172b4d;
+}
+
+footer form{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+footer ul{
+  display: flex;
+gap: 20px;
+}
