@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -43,8 +44,6 @@ header a {
   color: #172b4d;
   line-height: 52px;
   margin: 29px auto;
-
-  /* width: 327px; */
 }
 
 .headline h1 span {
@@ -120,6 +119,7 @@ footer ul {
 }
 
 footer input {
+  box-sizing: border-box;
   width: auto;
   height: 48px;
   border: 1px solid #d0d9d4;
