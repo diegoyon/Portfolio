@@ -228,10 +228,15 @@ button {
   background-color: #36b37f;
   border: none;
   color: white;
+  transition-property: background-color, color, border;
+  transition-duration: 1s, 1s, 1s;
 }
 
 button:hover {
   box-shadow: 0 8px 16px 0 rgba(54, 179, 127, 0.24);
+  background-color: white;
+  color: #36b37e;
+  border: 1px solid #36b37e;
 }
 
 button:active {
