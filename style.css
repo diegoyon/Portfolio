@@ -26,6 +26,18 @@ header a {
   font-size: 20px;
   font-weight: 600;
   color: #28352f;
+  animation-duration: 3s ;
+  animation-name: rotate;
+  animation-iteration-count: 2;
+}
+
+@keyframes rotate{
+  from{
+    
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 
 .headline {
