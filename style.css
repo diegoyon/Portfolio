@@ -296,6 +296,10 @@ button:active {
   border-radius: 8px;
 }
 
+.categories img {
+  transition: transform 1s;
+}
+
 .categories li img {
   margin-top: 18px;
 }
@@ -304,11 +308,7 @@ button:active {
   margin: 24px;
 }
 
-.categories img{
-  transition: transform 1s;
-}
-
-.categories img:hover{
+.categories img:hover {
   transform: scale(1.3);
 }
 
