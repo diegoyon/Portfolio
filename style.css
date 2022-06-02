@@ -26,16 +26,13 @@ header a {
   font-size: 20px;
   font-weight: 600;
   color: #28352f;
-  animation-duration: 3s ;
+  animation-duration: 3s;
   animation-name: rotate;
   animation-iteration-count: 2;
 }
 
-@keyframes rotate{
-  from{
-    
-  }
-  to{
+@keyframes rotate {
+  to {
     transform: rotate(360deg);
   }
 }
@@ -271,7 +268,8 @@ button:active {
   text-align: center;
   align-items: center;
   padding-top: 68px;
-  background-image: url(./images/illustration2-aboutme.svg),
+  background-image:
+    url(./images/illustration2-aboutme.svg),
     url(./images/illustration-aboutme.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: right top, left top;
@@ -329,13 +327,6 @@ button:active {
   margin: 24px;
 }
 
-<<<<<<< HEAD
-=======
-.categories img {
-  transition: transform 1s;
-}
-
->>>>>>> 4e3db8bb327119de96e45145de49ae3bdba15efd
 .categories img:hover {
   transform: scale(1.3);
 }
@@ -397,7 +388,8 @@ button:active {
   }
 
   .aboutme {
-    background-image: url(./images/illustration-about-me-2-desktop.svg),
+    background-image:
+      url(./images/illustration-about-me-2-desktop.svg),
       url(./images/illustration-about-me-desktop.svg);
     background-position: left 30%, right top;
   }
@@ -418,7 +410,8 @@ button:active {
   }
 
   footer {
-    background-image: url(./images/illustration-contact-form-left.svg),
+    background-image:
+      url(./images/illustration-contact-form-left.svg),
       url(./images/illustration-contact-form-middle.svg),
       url(./images/illustration-contact-form-right.svg);
     background-repeat: no-repeat no-repeat no-repeat;
