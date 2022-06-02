@@ -304,6 +304,14 @@ button:active {
   margin: 24px;
 }
 
+.categories img{
+  transition: transform 1s;
+}
+
+.categories img:hover{
+  transform: scale(1.3);
+}
+
 .description ul li {
   background-color: #ebf0ee;
   border-radius: 4px;
