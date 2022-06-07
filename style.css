@@ -144,7 +144,8 @@ footer input::placeholder {
   font-weight: 400;
 }
 
-footer input:hover {
+footer input:hover,
+footer input:focus {
   transform: translate(20px, 0);
 }
 
