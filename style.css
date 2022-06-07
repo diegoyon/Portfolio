@@ -28,7 +28,7 @@ header a {
   color: #28352f;
   animation-duration: 3s;
   animation-name: rotate;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
 }
 
 @keyframes rotate {
@@ -57,6 +57,13 @@ header a {
 
 .headline h1 span {
   color: #36b37e;
+}
+
+footer p {
+  font-size: 40px;
+  font-weight: 700;
+  color: #172b4d;
+  margin-bottom: 58px;
 }
 
 .headline p,
@@ -107,13 +114,6 @@ footer {
   align-items: center;
 }
 
-footer h2 {
-  font-size: 40px;
-  font-weight: 700;
-  color: #172b4d;
-  margin-bottom: 58px;
-}
-
 footer form {
   display: flex;
   flex-direction: column;
@@ -144,7 +144,8 @@ footer input::placeholder {
   font-weight: 400;
 }
 
-footer input:hover {
+footer input:hover,
+footer input:focus {
   transform: translate(20px, 0);
 }
 
@@ -161,7 +162,7 @@ footer textarea:hover {
   transform: translate(20px, 0);
 }
 
-footer h3 {
+.email {
   color: #42526e;
   font-size: 20px;
   font-weight: 400;
@@ -251,7 +252,8 @@ button {
   transition-duration: 1s, 1s, 1s;
 }
 
-button:hover {
+button:hover,
+button:focus {
   box-shadow: 0 8px 16px 0 rgba(54, 179, 127, 0.24);
   background-color: white;
   color: #36b37e;
@@ -430,5 +432,9 @@ button:active {
 
   .desktop-footer {
     display: flex;
+  }
+
+  .email {
+    display: none;
   }
 }
