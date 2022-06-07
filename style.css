@@ -59,6 +59,13 @@ header a {
   color: #36b37e;
 }
 
+footer p {
+  font-size: 40px;
+  font-weight: 700;
+  color: #172b4d;
+  margin-bottom: 58px;
+}
+
 .headline p,
 .aboutme p {
   font-weight: 400;
@@ -105,13 +112,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-footer p {
-  font-size: 40px;
-  font-weight: 700;
-  color: #172b4d;
-  margin-bottom: 58px;
 }
 
 footer form {
