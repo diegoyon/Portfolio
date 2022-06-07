@@ -107,7 +107,7 @@ footer {
   align-items: center;
 }
 
-footer h2 {
+footer p {
   font-size: 40px;
   font-weight: 700;
   color: #172b4d;
@@ -162,7 +162,7 @@ footer textarea:hover {
   transform: translate(20px, 0);
 }
 
-footer h3 {
+.email {
   color: #42526e;
   font-size: 20px;
   font-weight: 400;
@@ -432,5 +432,9 @@ button:active {
 
   .desktop-footer {
     display: flex;
+  }
+
+  .email {
+    display: none;
   }
 }
