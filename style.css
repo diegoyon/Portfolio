@@ -28,7 +28,7 @@ header a {
   color: #28352f;
   animation-duration: 3s;
   animation-name: rotate;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
 }
 
 @keyframes rotate {
@@ -251,7 +251,8 @@ button {
   transition-duration: 1s, 1s, 1s;
 }
 
-button:hover {
+button:hover,
+button:focus {
   box-shadow: 0 8px 16px 0 rgba(54, 179, 127, 0.24);
   background-color: white;
   color: #36b37e;
