@@ -441,7 +441,25 @@ button:active {
 
 .menu-attributes {
   position: absolute;
-  background-color: red;
-  width: 100%;
-  height: 100vh;
+  top: 0;
+  right: 0;
+  left:0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  gap: 40px;
+}
+
+.iconx{
+  width: 12px;
+  align-self: end;
+}
+
+.menu-items{
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  color: #3A4A42;
 }
