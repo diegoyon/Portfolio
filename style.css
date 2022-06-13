@@ -1,5 +1,6 @@
 * {
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -437,4 +438,29 @@ button:active {
   .email {
     display: none;
   }
+}
+
+.menu-attributes {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  gap: 40px;
+}
+
+.iconx {
+  width: 12px;
+  align-self: end;
+}
+
+.menu-items {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  color: #3a4a42;
 }
