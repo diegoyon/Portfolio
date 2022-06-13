@@ -443,7 +443,7 @@ button:active {
   position: absolute;
   top: 0;
   right: 0;
-  left:0;
+  left: 0;
   bottom: 0;
   background-color: white;
   display: flex;
@@ -452,14 +452,14 @@ button:active {
   gap: 40px;
 }
 
-.iconx{
+.iconx {
   width: 12px;
   align-self: end;
 }
 
-.menu-items{
+.menu-items {
   font-size: 32px;
   font-weight: 600;
   line-height: 44px;
-  color: #3A4A42;
+  color: #3a4a42;
 }
