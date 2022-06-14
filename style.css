@@ -239,11 +239,10 @@ hr {
   gap: 8px;
 }
 
-button {
+button, .button-modal {
   font-size: 17px;
   font-weight: 500;
   padding: 12px;
-  height: 48px;
   border-radius: 4px;
   align-self: center;
   background-color: #36b37f;
@@ -463,4 +462,27 @@ button:active {
   font-weight: 600;
   line-height: 44px;
   color: #3a4a42;
+}
+
+.popup-background{
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(193, 199, 208, 0.8);
+}
+
+.popup{
+  background-color: white;
+  border-radius: 16px;
+  /* width: 60%; */
+  width: 315px;
+  padding: 16px;
+  margin: 20px auto;
+}
+
+.buttons-container{
+  display: flex;
+  gap: 12px;
 }
