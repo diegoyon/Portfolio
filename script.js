@@ -1,43 +1,6 @@
 const mobile = document.querySelector('.mobile img');
 const body = document.querySelector('body');
 
-function displaymenu() {
-  const menu = document.createElement('div');
-  menu.className = 'menu-attributes';
-
-  const iconX = document.createElement('img');
-  iconX.src = './images/IconX.png';
-  iconX.className = 'iconx';
-  iconX.addEventListener('click', () => { body.removeChild(menu); });
-
-  const portfolio = document.createElement('a');
-  portfolio.href = '#portfoliosection';
-  portfolio.textContent = 'Portfolio';
-  portfolio.className = 'menu-items';
-  portfolio.addEventListener('click', () => { body.removeChild(menu); });
-
-  const aboutme = document.createElement('a');
-  aboutme.href = '#aboutmesection';
-  aboutme.textContent = 'About';
-  aboutme.className = 'menu-items';
-  aboutme.addEventListener('click', () => { body.removeChild(menu); });
-
-  const contact = document.createElement('a');
-  contact.href = '#contactsection';
-  contact.textContent = 'Contact';
-  contact.className = 'menu-items';
-  contact.addEventListener('click', () => { body.removeChild(menu); });
-
-  menu.appendChild(iconX);
-  menu.appendChild(portfolio);
-  menu.appendChild(aboutme);
-  menu.appendChild(contact);
-
-  body.appendChild(menu);
-}
-
-mobile.addEventListener('click', displaymenu);
-
 let projects = [
   {
     name: 'Project1',
@@ -83,42 +46,80 @@ let projects = [
     name: 'Project6',
     description: 'Lorem Ipsum 6 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     featuredImg: './images/card1img.png',
-    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html','react','go'],
     linkLive: 'https://google.com',
     linkSource: 'https://github.com',
   }
 ]
 
+function displaymenu() {
+  const menu = document.createElement('div');
+  menu.className = 'menu-attributes';
+
+  const iconX = document.createElement('img');
+  iconX.src = './images/IconX.png';
+  iconX.className = 'iconx';
+  iconX.addEventListener('click', () => { body.removeChild(menu); });
+
+  const portfolio = document.createElement('a');
+  portfolio.href = '#portfoliosection';
+  portfolio.textContent = 'Portfolio';
+  portfolio.className = 'menu-items';
+  portfolio.addEventListener('click', () => { body.removeChild(menu); });
+
+  const aboutme = document.createElement('a');
+  aboutme.href = '#aboutmesection';
+  aboutme.textContent = 'About';
+  aboutme.className = 'menu-items';
+  aboutme.addEventListener('click', () => { body.removeChild(menu); });
+
+  const contact = document.createElement('a');
+  contact.href = '#contactsection';
+  contact.textContent = 'Contact';
+  contact.className = 'menu-items';
+  contact.addEventListener('click', () => { body.removeChild(menu); });
+
+  menu.appendChild(iconX);
+  menu.appendChild(portfolio);
+  menu.appendChild(aboutme);
+  menu.appendChild(contact);
+
+  body.appendChild(menu);
+}
+
+mobile.addEventListener('click', displaymenu);
+
+
+
 const gridContainer = document.querySelector('.grid-container');
 for (let i = 0; i < projects.length; i++) {
-  const card1 = document.createElement('div');
-  card1.className = 'card card'+i;
+  const card = document.createElement('div');
+  card.className = 'card card'+i;
+
   const description = document.createElement('div');
   description.className = 'description';
-  const miniTitle = document.createElement('h2');
-  miniTitle.innerText = projects[i].name;
-  const technologies2 = document.createElement('ul');
-  const rubyOnRails = document.createElement('li');
-  rubyOnRails.innerText = projects[i].technologies[0];
-  const css = document.createElement('li');
-  css.innerText = projects[i].technologies[1];
-  const javaScript = document.createElement('li');
-  javaScript.innerText = projects[i].technologies[2];
-  const html = document.createElement('li');
-  html.innerText = projects[i].technologies[3];
-  const buttonCard1 = document.createElement('button');
-  buttonCard1.innerHTML = "See Project";
-  buttonCard1.classList = 'btn'+parseInt(i+1);
 
-  gridContainer.appendChild(card1);
-  card1.appendChild(description);
+  const miniTitle = document.createElement('h3');
+  miniTitle.innerHTML = projects[i].name;
+
+  const technologiesContainer = document.createElement('ul');
+  technologiesContainer.className = 'technologies-container';
+
+  for (let j=0; j<projects[i].technologies.length; j++){
+    const technologiesItem = document.createElement('li');
+    technologiesItem.innerHTML = projects[i].technologies[j];
+    technologiesContainer.appendChild(technologiesItem);
+  }
+  
+  const buttonCard = document.createElement('button');
+  buttonCard.innerHTML = "See Project";
+  buttonCard.classList = 'btn'+parseInt(i+1);
+
+  gridContainer.appendChild(card);
+  card.appendChild(description);
   description.appendChild(miniTitle);
-  description.appendChild(technologies2);
-  technologies2.appendChild(rubyOnRails);
-  technologies2.appendChild(css);
-  technologies2.appendChild(javaScript);
-  technologies2.appendChild(html);
-  description.appendChild(buttonCard1);
+  description.appendChild(technologiesContainer);
+  description.appendChild(buttonCard);
 }
 
 let buttons = document.querySelectorAll('.card button');
@@ -142,12 +143,31 @@ function displaymodal(event){
   modalimg.src = projects[modal].featuredImg;
   popup.appendChild(modalimg)
 
+  const iconxModal = document.createElement('img');
+  iconxModal.src = './images/iconx-modal.png';
+  iconxModal.className = 'iconx-modal';
+  iconxModal.addEventListener('click', () => { body.removeChild(popupBackground); });
+  popup.appendChild(iconxModal);
+
   const modaltitle = document.createElement('h2');
   modaltitle.innerText = projects[modal].name;
+  modaltitle.className = 'modal-h2';
   popup.appendChild(modaltitle);
+
+  const technolist = document.createElement('ul');
+  technolist.classList = 'modal-ul';
+  popup.appendChild(technolist);
+
+  for (let i=0; i<projects[modal].technologies.length; i++){
+    let technoitem = document.createElement('li');
+    technoitem.innerHTML = projects[modal].technologies[i];
+    technoitem.classList = 'modal-li';
+    technolist.appendChild(technoitem);
+  }
 
   const paragraph = document.createElement('p');
   paragraph.innerText = projects[modal].description;
+  paragraph.classList = 'modal-p';
   popup.appendChild(paragraph);
 
   const buttonsContainer = document.createElement('div');
