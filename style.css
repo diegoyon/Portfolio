@@ -484,9 +484,10 @@ button:active {
   background-color: white;
   border-radius: 16px;
   /* width: 60%; */
-  width: 315px;
+  width: 343px;
   padding: 16px;
   margin: 20px auto;
+  box-sizing: border-box;
 }
 
 .buttons-container{
@@ -537,19 +538,42 @@ color: #344563;
 .iconx-modal{
   width: 12px;
   position: absolute;
-  top: 60px;
-  right: 230px;
+  /* top: 60px; */
+  /* right: 0px; */
   cursor: pointer;
+  background-color: red;
+}
+
+.buttons-container2{
+  display: none;
+}
+
+.modalimg{
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px){
   .popup{
     display: flex;
     flex-direction: column;
-    background-color: red;
+    width: 920px;
+    height: 1083px;
+
   }
-  .popup p{
-    order: -1;
+
+  .iconx-modal{
+    width: 12px;
+    padding: 14px;
+    position: static;
+    cursor: pointer;
+    background-color: #EBECF0;
+    border-radius: 8px;
+    align-self: end;
+    margin-bottom: 14px;
+  }
+  
+  .buttons-container{
+    display: none;
   }
   
 }

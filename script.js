@@ -13,7 +13,7 @@ let projects = [
   {
     name: 'Project2',
     description: 'Lorem Ipsum 2 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    featuredImg: './images/card1img.png',
+    featuredImg: './images/card2img.jpg',
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
     linkLive: 'https://google.com',
     linkSource: 'https://github.com',
@@ -139,15 +139,16 @@ function displaymodal(event){
   popup.className = 'popup';
   popupBackground.appendChild(popup);
 
-  const modalimg = document.createElement('img');
-  modalimg.src = projects[modal].featuredImg;
-  popup.appendChild(modalimg)
-
   const iconxModal = document.createElement('img');
   iconxModal.src = './images/iconx-modal.png';
   iconxModal.className = 'iconx-modal';
   iconxModal.addEventListener('click', () => { body.removeChild(popupBackground); });
   popup.appendChild(iconxModal);
+
+  const modalimg = document.createElement('img');
+  modalimg.src = projects[modal].featuredImg;
+  modalimg.className = 'modalimg';
+  popup.appendChild(modalimg)
 
   const modaltitle = document.createElement('h2');
   modaltitle.innerText = projects[modal].name;
