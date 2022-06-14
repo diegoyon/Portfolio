@@ -370,6 +370,7 @@ button:active {
 }
 
 @media only screen and (min-width: 768px) {
+
   .mobile {
     display: none;
   }
@@ -485,4 +486,16 @@ button:active {
 .buttons-container{
   display: flex;
   gap: 12px;
+}
+
+@media only screen and (min-width: 768px){
+  .popup{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+  }
+  .popup p{
+    order: -1;
+  }
+  
 }
