@@ -5,7 +5,7 @@ let projects = [
   {
     name: 'Project1',
     description: 'Lorem Ipsum 1 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    featuredImg: './images/card1img.png',
+    featuredImg: './images/card1img.jpg',
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
     linkLive: 'https://google.com',
     linkSource: 'https://github.com',
@@ -21,7 +21,7 @@ let projects = [
   {
     name: 'Project3',
     description: 'Lorem Ipsum 3 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    featuredImg: './images/card1img.png',
+    featuredImg: './images/card3img.jpg',
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
     linkLive: 'https://google.com',
     linkSource: 'https://github.com',
@@ -29,7 +29,7 @@ let projects = [
   {
     name: 'Project4',
     description: 'Lorem Ipsum 4 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    featuredImg: './images/card1img.png',
+    featuredImg: './images/card4img.jpg',
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
     linkLive: 'https://google.com',
     linkSource: 'https://github.com',
@@ -37,7 +37,7 @@ let projects = [
   {
     name: 'Project5',
     description: 'Lorem Ipsum 5 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    featuredImg: './images/card1img.png',
+    featuredImg: './images/card5img.jpg',
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
     linkLive: 'https://google.com',
     linkSource: 'https://github.com',
@@ -45,7 +45,7 @@ let projects = [
   {
     name: 'Project6',
     description: 'Lorem Ipsum 6 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    featuredImg: './images/card1img.png',
+    featuredImg: './images/card6img.jpg',
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html','react','go'],
     linkLive: 'https://google.com',
     linkSource: 'https://github.com',
@@ -96,6 +96,10 @@ for (let i = 0; i < projects.length; i++) {
   const card = document.createElement('div');
   card.className = 'card card'+i;
 
+  const cardImage = document.createElement('img');
+  cardImage.src = projects[i].featuredImg;
+  cardImage.className = 'card-image';
+
   const description = document.createElement('div');
   description.className = 'description';
 
@@ -116,6 +120,7 @@ for (let i = 0; i < projects.length; i++) {
   buttonCard.classList = 'btn'+parseInt(i+1);
 
   gridContainer.appendChild(card);
+  card.appendChild(cardImage);
   card.appendChild(description);
   description.appendChild(miniTitle);
   description.appendChild(technologiesContainer);
@@ -150,10 +155,14 @@ function displaymodal(event){
   modalimg.className = 'modalimg';
   popup.appendChild(modalimg)
 
+  const titleContainer = document.createElement('div');
+  titleContainer.className = 'title-container';
+  popup.appendChild(titleContainer);
+
   const modaltitle = document.createElement('h2');
   modaltitle.innerText = projects[modal].name;
   modaltitle.className = 'modal-h2';
-  popup.appendChild(modaltitle);
+  titleContainer.appendChild(modaltitle);
 
   const technolist = document.createElement('ul');
   technolist.classList = 'modal-ul';
@@ -176,15 +185,53 @@ function displaymodal(event){
   popup.appendChild(buttonsContainer);
 
   const button1 = document.createElement('a');
-  button1.innerHTML = 'See Live';
+  button1.innerHTML = 'See Live ';
   button1.href = projects[modal].linkLive;
   button1.className = 'button-modal';
   buttonsContainer.appendChild(button1);
+
+  const liveImg = document.createElement('img');
+  liveImg.className = 'icon-button';
+  liveImg.src = './images/liveIcon.svg';
+  button1.appendChild(liveImg);
 
   const button2 = document.createElement('a');
   button2.innerHTML = 'See Source';
   button2.href = projects[modal].linkSource;
   button2.className = 'button-modal';
   buttonsContainer.appendChild(button2);
+
+  const sourceImg = document.createElement('img');
+  sourceImg.className = 'icon-button';
+  sourceImg.src = './images/sourceIcon.png';
+  button2.appendChild(sourceImg);
+
+  
+
+  const buttonsContainer2 = document.createElement('div');
+  buttonsContainer2.className = 'buttons-container2';
+  titleContainer.appendChild(buttonsContainer2);
+
+  const button3 = document.createElement('a');
+  button3.innerHTML = 'See Live';
+  button3.href = projects[modal].linkLive;
+  button3.className = 'button-modal2';
+  buttonsContainer2.appendChild(button3);
+
+  const liveImg2 = document.createElement('img');
+  liveImg2.className = 'icon-button';
+  liveImg2.src = './images/liveIcon.svg';
+  button3.appendChild(liveImg2);
+
+  const button4 = document.createElement('a');
+  button4.innerHTML = 'See Source';
+  button4.href = projects[modal].linkSource;
+  button4.className = 'button-modal2';
+  buttonsContainer2.appendChild(button4);
+
+  const sourceImg2 = document.createElement('img');
+  sourceImg2.className = 'icon-button';
+  sourceImg2.src = './images/sourceIcon.png';
+  button4.appendChild(sourceImg2);
 }
 

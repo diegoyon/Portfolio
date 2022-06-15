@@ -10,6 +10,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul {
@@ -204,7 +205,9 @@ hr {
   border-radius: 8px;
   background-color: #ebf0ee;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .description {
@@ -240,7 +243,7 @@ hr {
   gap: 8px;
 }
 
-button, .button-modal {
+button, .button-modal, .button-modal2 {
   font-size: 17px;
   font-weight: 500;
   padding: 12px;
@@ -483,16 +486,17 @@ button:active {
 .popup{
   background-color: white;
   border-radius: 16px;
-  /* width: 60%; */
-  width: 343px;
+  width: 85%;
+  min-width: 343px;
   padding: 16px;
   margin: 20px auto;
   box-sizing: border-box;
 }
 
-.buttons-container{
+.buttons-container, .buttons-container2{
   display: flex;
   gap: 12px;
+  min-width: 230px;
 }
 
 .modal-h2{
@@ -538,10 +542,15 @@ color: #344563;
 .iconx-modal{
   width: 12px;
   position: absolute;
-  /* top: 60px; */
-  /* right: 0px; */
+  top: 6%;
+  right: 12.5%;
   cursor: pointer;
-  background-color: red;
+  /* background-color: red; */
+}
+
+.title-container{
+  display: flex;
+  justify-content: space-between;
 }
 
 .buttons-container2{
@@ -552,13 +561,27 @@ color: #344563;
   width: 100%;
 }
 
+.card-image{
+  height: 250px;
+  object-fit: cover;
+}
+
+.button-modal, .button-modal2{
+  display: flex;
+  gap: 14px;
+}
+
+.icon-button{
+  width: 16px;
+}
+
 @media only screen and (min-width: 768px){
   .popup{
     display: flex;
     flex-direction: column;
-    width: 920px;
-    height: 1083px;
-
+    max-width: 920px;
+    /* height: 1083px; */
+    overflow: auto;
   }
 
   .iconx-modal{
@@ -574,6 +597,10 @@ color: #344563;
   
   .buttons-container{
     display: none;
+  }
+
+  .buttons-container2{
+    display: flex;
   }
   
 }
