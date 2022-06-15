@@ -245,7 +245,7 @@ let emailAddress = email.value;
 function checkEmail(event){
   console.log(isUpper(event.target.value));
   if (isUpper(event.target.value)){
-    message.innerText = 'ERROR: email address not in correct format.';
+    message.innerText = 'ERROR: email address should be in lowercase.';
     email.setCustomValidity("Email address should be in lowercase");
     // email.reportValidity();
   }
