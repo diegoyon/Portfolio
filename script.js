@@ -230,3 +230,34 @@ buttons = [...buttons]; // turn nodelist to array
 for (let i = 0; i < buttons.length; i += 1) {
   buttons[i].addEventListener('click', displaymodal);
 }
+
+function isUpper(str) {
+  return !/^[a-z]*$/.test(str) && /[A-Z]/.test(str);
+}
+
+const form = document.getElementById('form');
+const email = form.elements['email'];
+const message = document.querySelector('small');
+
+let emailAddress = email.value;
+
+
+function checkEmail(event){
+  console.log(isUpper(event.target.value));
+  if (isUpper(event.target.value)){
+    message.innerText = 'ERROR: email address not in correct format.';
+    email.setCustomValidity("Email address should be in lowercase");
+    // email.reportValidity();
+  }
+  else {
+    message.innerText = '';
+    email.setCustomValidity("");
+  }
+}
+
+// function checkForm(event){
+//   event.preventDefault()
+// }
+
+// form.addEventListener("submit", checkForm);
+email.addEventListener("input", checkEmail);
