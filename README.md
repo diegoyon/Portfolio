@@ -22,7 +22,8 @@ To obtain a local copy of the project follow this steps:
 
 After creating it, you can go ahead and open the "index.html" file in your browser.
 
-
+## Screenshot
+![Alt text](/screenshots/screenshot-desktop.png "Optional Title")
 
 ## Authors
 
