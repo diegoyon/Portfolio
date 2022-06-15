@@ -236,28 +236,19 @@ function isUpper(str) {
 }
 
 const form = document.getElementById('form');
-const email = form.elements['email'];
+const { email } = form.elements;
 const message = document.querySelector('small');
 
-let emailAddress = email.value;
-
-
-function checkEmail(event){
-  console.log(isUpper(event.target.value));
-  if (isUpper(event.target.value)){
+function checkEmail(event) {
+  if (isUpper(event.target.value)) {
+    message.classList = 'active';
     message.innerText = 'ERROR: email address should be in lowercase.';
-    email.setCustomValidity("Email address should be in lowercase");
-    // email.reportValidity();
-  }
-  else {
+    email.setCustomValidity('Email address should be in lowercase');
+  } else {
     message.innerText = '';
-    email.setCustomValidity("");
+    message.classList = '';
+    email.setCustomValidity('');
   }
 }
 
-// function checkForm(event){
-//   event.preventDefault()
-// }
-
-// form.addEventListener("submit", checkForm);
-email.addEventListener("input", checkEmail);
+email.addEventListener('input', checkEmail);
