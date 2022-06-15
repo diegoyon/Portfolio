@@ -1,7 +1,7 @@
 const mobile = document.querySelector('.mobile img');
 const body = document.querySelector('body');
 
-let projects = [
+const projects = [
   {
     name: 'Project1',
     description: 'Lorem Ipsum 1 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
@@ -46,11 +46,11 @@ let projects = [
     name: 'Project6',
     description: 'Lorem Ipsum 6 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     featuredImg: './images/card6img.jpg',
-    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html','react','go'],
+    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html', 'react', 'go'],
     linkLive: 'https://google.com',
     linkSource: 'https://github.com',
-  }
-]
+  },
+];
 
 function displaymenu() {
   const menu = document.createElement('div');
@@ -89,12 +89,10 @@ function displaymenu() {
 
 mobile.addEventListener('click', displaymenu);
 
-
-
 const gridContainer = document.querySelector('.grid-container');
-for (let i = 0; i < projects.length; i++) {
+for (let i = 0; i < projects.length; i += 1) {
   const card = document.createElement('div');
-  card.className = 'card card'+i;
+  card.className = `card card${i}`;
 
   const cardImage = document.createElement('img');
   cardImage.src = projects[i].featuredImg;
@@ -109,15 +107,15 @@ for (let i = 0; i < projects.length; i++) {
   const technologiesContainer = document.createElement('ul');
   technologiesContainer.className = 'technologies-container';
 
-  for (let j=0; j<projects[i].technologies.length; j++){
+  for (let j = 0; j < projects[i].technologies.length; j += 1) {
     const technologiesItem = document.createElement('li');
     technologiesItem.innerHTML = projects[i].technologies[j];
     technologiesContainer.appendChild(technologiesItem);
   }
-  
+
   const buttonCard = document.createElement('button');
-  buttonCard.innerHTML = "See Project";
-  buttonCard.classList = 'btn'+parseInt(i+1);
+  buttonCard.innerHTML = 'See Project';
+  buttonCard.classList = `btn${i + 1}`;
 
   gridContainer.appendChild(card);
   card.appendChild(cardImage);
@@ -127,14 +125,8 @@ for (let i = 0; i < projects.length; i++) {
   description.appendChild(buttonCard);
 }
 
-let buttons = document.querySelectorAll('.card button');
-buttons = [...buttons]; //turn nodelist to array
-for(let i=0; i<buttons.length; i++){
-  buttons[i].addEventListener('click', displaymodal);
-}
-
-function displaymodal(event){
-  let modal = parseInt(event.srcElement.className.slice(-1))-1;
+function displaymodal(event) {
+  const modal = event.srcElement.className.slice(-1) - 1;
 
   const popupBackground = document.createElement('div');
   popupBackground.className = 'popup-background';
@@ -153,7 +145,7 @@ function displaymodal(event){
   const modalimg = document.createElement('img');
   modalimg.src = projects[modal].featuredImg;
   modalimg.className = 'modalimg';
-  popup.appendChild(modalimg)
+  popup.appendChild(modalimg);
 
   const titleContainer = document.createElement('div');
   titleContainer.className = 'title-container';
@@ -168,8 +160,8 @@ function displaymodal(event){
   technolist.classList = 'modal-ul';
   popup.appendChild(technolist);
 
-  for (let i=0; i<projects[modal].technologies.length; i++){
-    let technoitem = document.createElement('li');
+  for (let i = 0; i < projects[modal].technologies.length; i += 1) {
+    const technoitem = document.createElement('li');
     technoitem.innerHTML = projects[modal].technologies[i];
     technoitem.classList = 'modal-li';
     technolist.appendChild(technoitem);
@@ -206,8 +198,6 @@ function displaymodal(event){
   sourceImg.src = './images/sourceIcon.png';
   button2.appendChild(sourceImg);
 
-  
-
   const buttonsContainer2 = document.createElement('div');
   buttonsContainer2.className = 'buttons-container2';
   titleContainer.appendChild(buttonsContainer2);
@@ -235,3 +225,8 @@ function displaymodal(event){
   button4.appendChild(sourceImg2);
 }
 
+let buttons = document.querySelectorAll('.card button');
+buttons = [...buttons]; // turn nodelist to array
+for (let i = 0; i < buttons.length; i += 1) {
+  buttons[i].addEventListener('click', displaymodal);
+}
