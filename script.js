@@ -85,6 +85,9 @@ function displaymenu() {
   menu.appendChild(contact);
 
   body.appendChild(menu);
+
+  body.className = 'noscroll';
+  iconX.addEventListener('click', () => { body.classList.remove('noscroll'); });
 }
 
 mobile.addEventListener('click', displaymenu);
@@ -223,6 +226,9 @@ function displaymodal(event) {
   sourceImg2.className = 'icon-button';
   sourceImg2.src = './images/sourceIcon.png';
   button4.appendChild(sourceImg2);
+
+  body.className = 'noscroll';
+  iconxModal.addEventListener('click', () => { body.classList.remove('noscroll'); });
 }
 
 let buttons = document.querySelectorAll('.card button');

@@ -28,14 +28,14 @@ header a {
   font-size: 20px;
   font-weight: 600;
   color: #28352f;
-  animation-duration: 3s;
-  animation-name: rotate;
+  animation-duration: 2s;
+  animation-name: appearLeft;
   animation-iteration-count: 1;
 }
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
+@keyframes appearLeft {
+  from {
+    transform: translate(-150px, 0);
   }
 }
 
@@ -55,6 +55,19 @@ header a {
   color: #172b4d;
   line-height: 52px;
   margin: 29px auto;
+  animation-duration: 2s;
+  animation-name: appear;
+  animation-iteration-count: 1;
+}
+
+@keyframes appear {
+  from {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .headline h1 span {
@@ -452,7 +465,7 @@ button:active {
 }
 
 .menu-attributes {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -462,6 +475,7 @@ button:active {
   flex-direction: column;
   padding: 28px;
   gap: 40px;
+  overflow: auto;
 }
 
 .iconx {
@@ -480,10 +494,14 @@ button:active {
 .popup-background {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 2;
   background-color: rgba(193, 199, 208, 0.8);
+}
+
+.noscroll {
+  overflow: hidden;
 }
 
 .popup {
