@@ -637,3 +637,8 @@ small {
 .active {
   display: block;
 }
+
+.error{
+  border: 1px solid red;
+  outline-color: red;
+}

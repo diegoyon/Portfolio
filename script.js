@@ -255,10 +255,12 @@ function checkEmail(event) {
   if (isUpper(event.target.value)) {
     message.classList = 'active';
     message.innerText = 'ERROR: email address should be in lowercase.';
+    email.className = 'error';
     email.setCustomValidity('Email address should be in lowercase');
   } else {
     message.innerText = '';
     message.classList = '';
+    email.className = '';
     email.setCustomValidity('');
   }
 }
