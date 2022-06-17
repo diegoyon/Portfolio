@@ -280,8 +280,7 @@ button:focus {
   border: 1px solid #36b37e;
 }
 
-button:active,.button-modal:active,
-.button-modal2:active {
+button:active {
   background-color: #008552;
 }
 

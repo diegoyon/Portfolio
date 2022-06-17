@@ -59,25 +59,25 @@ function displaymenu() {
   const iconX = document.createElement('img');
   iconX.src = './images/IconX.png';
   iconX.className = 'iconx';
-  iconX.addEventListener('click', () => { body.removeChild(menu); body.classList.remove('noscroll') });
+  iconX.addEventListener('click', () => { body.removeChild(menu); body.classList.remove('noscroll'); });
 
   const portfolio = document.createElement('a');
   portfolio.href = '#portfoliosection';
   portfolio.textContent = 'Portfolio';
   portfolio.className = 'menu-items';
-  portfolio.addEventListener('click', () => { body.removeChild(menu); body.classList.remove('noscroll') });
+  portfolio.addEventListener('click', () => { body.removeChild(menu); body.classList.remove('noscroll'); });
 
   const aboutme = document.createElement('a');
   aboutme.href = '#aboutmesection';
   aboutme.textContent = 'About';
   aboutme.className = 'menu-items';
-  aboutme.addEventListener('click', () => { body.removeChild(menu); body.classList.remove('noscroll') });
+  aboutme.addEventListener('click', () => { body.removeChild(menu); body.classList.remove('noscroll'); });
 
   const contact = document.createElement('a');
   contact.href = '#contactsection';
   contact.textContent = 'Contact';
   contact.className = 'menu-items';
-  contact.addEventListener('click', () => { body.removeChild(menu); body.classList.remove('noscroll') });
+  contact.addEventListener('click', () => { body.removeChild(menu); body.classList.remove('noscroll'); });
 
   menu.appendChild(iconX);
   menu.appendChild(portfolio);
@@ -228,10 +228,12 @@ function displaymodal(event) {
   button4.appendChild(sourceImg2);
 
   body.className = 'noscroll';
-  popupBackground.addEventListener('click', (event)=>{if (event.target.className=='popup-background'){
-    body.classList.remove('noscroll');
-    body.removeChild(popupBackground);
-  }})
+  popupBackground.addEventListener('click', (event) => {
+    if (event.target.className === 'popup-background') {
+      body.classList.remove('noscroll');
+      body.removeChild(popupBackground);
+    }
+  });
   iconxModal.addEventListener('click', () => { body.classList.remove('noscroll'); });
 }
 
