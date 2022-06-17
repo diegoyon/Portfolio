@@ -93,7 +93,7 @@ function displaymenu() {
 mobile.addEventListener('click', displaymenu);
 
 const gridContainer = document.querySelector('.grid-container');
-for (let i = 0; i < projects.length; i += 1) {
+for (let i = 0; i < projects.length; i += 2) {
   const card = document.createElement('div');
   card.className = `card card${i}`;
 
@@ -129,7 +129,7 @@ for (let i = 0; i < projects.length; i += 1) {
 }
 
 function displaymodal(event) {
-  const modal = event.srcElement.className.slice(-1) - 1;
+  const modal = event.srcElement.className.slice(-1);
 
   const popupBackground = document.createElement('div');
   popupBackground.className = 'popup-background';
@@ -252,7 +252,6 @@ function checkEmail(event) {
     email.setCustomValidity('Email address should be in lowercase');
   } else {
     message.innerText = '';
-    message.classList = '';
     email.setCustomValidity('');
   }
 }
