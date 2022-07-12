@@ -290,8 +290,7 @@ button:active {
   text-align: center;
   align-items: center;
   padding-top: 68px;
-  background-image:
-    url(./images/illustration2-aboutme.svg),
+  background-image: url(./images/illustration2-aboutme.svg),
     url(./images/illustration-aboutme.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: right top, left top;
@@ -393,6 +392,10 @@ button:active {
   cursor: pointer;
 }
 
+.desktop {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .mobile {
     display: none;
@@ -414,8 +417,7 @@ button:active {
   }
 
   .aboutme {
-    background-image:
-      url(./images/illustration-about-me-2-desktop.svg),
+    background-image: url(./images/illustration-about-me-2-desktop.svg),
       url(./images/illustration-about-me-desktop.svg);
     background-position: left 30%, right top;
   }
@@ -436,8 +438,7 @@ button:active {
   }
 
   footer {
-    background-image:
-      url(./images/illustration-contact-form-left.svg),
+    background-image: url(./images/illustration-contact-form-left.svg),
       url(./images/illustration-contact-form-middle.svg),
       url(./images/illustration-contact-form-right.svg);
     background-repeat: no-repeat no-repeat no-repeat;
@@ -638,7 +639,7 @@ small {
   display: block;
 }
 
-.error{
+.error {
   border: 1px solid red;
   outline-color: red;
 }
