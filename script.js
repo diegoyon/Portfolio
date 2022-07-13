@@ -12,13 +12,13 @@ const projects = [
     linkSource: "https://github.com/diegoyon/todolist",
   },
   {
-    name: "Project2",
+    name: "Awesome books",
     description:
-      "Lorem Ipsum 2 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    featuredImg: "./images/card2img.jpg",
-    technologies: ["Ruby on rails", "css", "JavaScript", "html"],
-    linkLive: "https://google.com",
-    linkSource: "https://github.com",
+      "In this project I created a website that lets you add and delete books titles and store them in the local storage.",
+    featuredImg: "./images/awesome-books.PNG",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    linkLive: "https://diegoyon.github.io/awesome-books/",
+    linkSource: "https://github.com/diegoyon/awesome-books",
   },
   {
     name: "Project3",
